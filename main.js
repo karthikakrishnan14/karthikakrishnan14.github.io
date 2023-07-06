@@ -50,7 +50,7 @@ function create_scene1(data) {
 	};
 
 	let keys = ["total"];
-	let colors = ["#115f9a"];
+	let colors = ["#0f52ba"];
 
 	let updated_data = [];
 
@@ -237,7 +237,7 @@ function create_scene2(data) {
 		.enter().append("rect")
 		.attr("x", d => x(d['type']))
 		.attr("width", x.bandwidth())
-		.attr("fill", "#115f9a")
+		.attr("fill", "#007474")
 		.on("mouseover", d => {
 			let xpos = xs[d['type']];
 			let c = d['city'].split(',')[0];
@@ -296,7 +296,7 @@ function create_scene3(data) {
 	let svgLegend = d3.select("#pie-chart-legends")
 		.append("svg").attr("viewBox", [0, 0, 400, 50]);
 
-	let colors = ["#808000", "#58595B", "#006c93", "#8D2048", "#00746F"];
+	let colors = ["#519a79", "#91b99d", "#e7e3cb", "#c0a972", "#ab7e67"];
 	let legend = svgLegend.selectAll(".legend")
 		.data(colors)
 		.enter().append("g")
@@ -405,7 +405,7 @@ function update(g, myData) {
 	});
 	var colorScale = d3.scaleOrdinal()
 		.domain(colorDomain)
-		.range(['#808000', '#58595B', '#006c93', '#8D2048', '#00746F'])
+		.range(['#519a79', '#91b99d', '#e7e3cb', '#c0a972', '#ab7e67'])
 
 	// Create a path element and set its d attribute
 	var u = g.selectAll('path');
